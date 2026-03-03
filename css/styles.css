@@ -1,14 +1,19 @@
-/* Color Palette
+/* Step 4b: Color palette copied from online source and pasted here
    #ffffff  - White (background)
-   #1a1a2e  - Dark Navy (header text)
-   #4a4e69  - Muted Slate (body text)
-   #9a8c98  - Dusty Mauve (accents / h2)
-   #c9ada7  - Soft Rose (h3 / borders)
-   #f2e9e4  - Blush Cream (alternating section bg)
+   #1a1a2e  - Dark Navy (header / footer background)
+   #4a4e69  - Muted Slate (body text, links)
+   #9a8c98  - Dusty Mauve (accents / muted paragraph text)
+   #c9ada7  - Soft Rose (h3 borders, section borders)
+   #f2e9e4  - Blush Cream (alternating section and job backgrounds)
 */
+
 
 /* Global Styles
 ------------------------------------*/
+
+/* Step 3b: Quick test — background color set to confirm CSS is linked properly */
+/* Step 4e: Font color adjusted for readability against the white background */
+/* Step 5e: Default font family set to JetBrains Mono for the body */
 body {
     background-color: #ffffff;
     color: #4a4e69;
@@ -19,14 +24,19 @@ body {
     padding: 0;
 }
 
+/* Step 5e: Font family set to Orbitron for h1 */
+/* Step 6a: Font size increased to 52px so h1 stands out prominently */
 h1 {
     font-family: 'Orbitron', monospace;
     font-size: 52px;
-    font-weight: 900;
+    font-weight: 700;
     color: #ffffff;
     margin: 0 0 6px 0;
 }
 
+/* Step 5e: Font family set to Orbitron for h2 */
+/* Step 6a: Font size set to 18px to differentiate h2 from body text */
+/* Step 4e: Color adjusted to slate for contrast on light backgrounds */
 h2 {
     font-family: 'Orbitron', monospace;
     font-size: 18px;
@@ -34,6 +44,8 @@ h2 {
     color: #4a4e69;
 }
 
+/* Step 5e: Font family set to Orbitron for h3 */
+/* Step 6b: Font size and weight adjusted for visual hierarchy */
 h3 {
     font-family: 'Orbitron', monospace;
     font-size: 14px;
@@ -44,19 +56,23 @@ h3 {
     margin-top: 24px;
 }
 
+/* Step 4e: Paragraph text color adjusted to match palette */
 p {
     color: #4a4e69;
 }
 
+/* Step 4e: List item color adjusted to match palette */
 li {
     color: #4a4e69;
 }
 
+/* Step 4e: Link color adjusted; underline removed for clean look */
 a {
     color: #4a4e69;
     text-decoration: none;
 }
 
+/* Profile photo — circular crop with soft rose border from palette */
 img {
     width: 180px;
     height: 180px;
@@ -69,6 +85,8 @@ img {
 
 /* Header & Footer
 ------------------------------------*/
+
+/* Step 4c: Header background color changed using palette color #1a1a2e (Dark Navy) */
 header {
     background-color: #1a1a2e;
     padding: 40px 60px;
@@ -77,38 +95,47 @@ header {
     gap: 40px;
 }
 
+/* Step 4e: h2 inside header overridden — rose color so it's visible on dark background */
+/* Step 6b: Font size reduced to 14px to keep it subtle under the h1 name */
 header .header-text h2 {
     color: #c9ada7;
     font-size: 14px;
     margin: 0 0 10px 0;
 }
 
+/* Step 4e: Bio paragraph in header uses muted mauve with reduced opacity */
 header .header-text p {
     color: #9a8c9899;
     font-size: 13px;
     margin: 0;
 }
 
+/* Step 4c: Footer background color changed using palette color #1a1a2e (Dark Navy) */
 footer {
     background-color: #1a1a2e;
     padding: 30px 60px;
     text-align: center;
 }
 
+/* Step 4e: Footer copyright text faded with opacity so it's subtle */
 footer p {
     color: #4a4e6966;
     font-size: 14px;
     margin: 10px 0 0 0;
 }
 
+/* Step 4e: Footer links spaced out and colored to match palette */
 footer a {
     color: #4a4e69;
     padding: 0 18px;
 }
 
 
-/* Work Experience
+/* Content Sections
 ------------------------------------*/
+
+/* Step 4c: Work Experience section background set to white from palette */
+/* Step 4d: Targeted via nth-of-type since no class was needed on the section tag */
 section:nth-of-type(1) {
     background-color: #ffffff;
     padding: 30px 40px;
@@ -117,7 +144,8 @@ section:nth-of-type(1) {
     max-width: 800px;
 }
 
-/* Projects */
+/* Step 4c: Projects section background set to blush cream (#f2e9e4) from palette */
+/* Step 4d: Targeted via nth-of-type since no class was needed on the section tag */
 section:nth-of-type(2) {
     background-color: #f2e9e4;
     padding: 30px 40px;
@@ -126,7 +154,8 @@ section:nth-of-type(2) {
     max-width: 800px;
 }
 
-/* Education */
+/* Step 4c: Education section background set to white from palette */
+/* Step 4d: Targeted via nth-of-type since no class was needed on the section tag */
 section:nth-of-type(3) {
     background-color: #ffffff;
     padding: 30px 40px;
@@ -136,36 +165,44 @@ section:nth-of-type(3) {
 }
 
 
-/* Job alternating rows
+/* Job / Project Cards — Alternating Row Colors
 ------------------------------------*/
+
+/* Step 4d: .job class added to each entry div in HTML to apply shared card styles */
 .job {
     padding: 16px 20px;
     border-top: 1px solid #c9ada750;
 }
 
+/* Step 4c/4d: .job_light added as needed for white background on odd entries */
 .job_light {
     background-color: #ffffff;
 }
 
+/* Step 4c/4d: .job_alt added as needed for blush cream background on even entries */
 .job_alt {
     background-color: #f2e9e4;
 }
 
 
-/* animation
+/* Scroll Animations
 ------------------------------------*/
+
+/* Sections start invisible and shifted left; JS adds .visible to trigger the transition */
 .slide_left {
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Same as slide_left but shifts in from the right */
 .slide_right {
     opacity: 0;
     transform: translateX(80px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Final state once .visible is added by the IntersectionObserver in the script */
 .slide_left.visible,
 .slide_right.visible {
     opacity: 1;

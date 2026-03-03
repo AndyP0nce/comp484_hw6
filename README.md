@@ -1,1 +1,1 @@
-pages link :  https://andyp0nce.github.io/comp484_hw6
+pageslink:  https://andyp0nce.github.io/comp484_hw6

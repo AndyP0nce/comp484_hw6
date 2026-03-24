@@ -5,11 +5,10 @@
    #9a8c98  - Dusty Mauve (accents / muted paragraph text)
    #c9ada7  - Soft Rose (h3 borders, section borders)
    #f2e9e4  - Blush Cream (alternating section and job backgrounds)
+*/
 
 
-
-/* Global Styles
-------------------------------------*/
+/* Global Styles */
 
 /* Step 3b: Quick test — background color set to confirm CSS is linked properly */
 /* Step 4e: Font color adjusted for readability against the white background */
@@ -83,8 +82,7 @@ img {
 }
 
 
-/* Header & Footer
-------------------------------------*/
+/* Header & Footer */
 
 /* Step 4c: Header background color changed using palette color #1a1a2e (Dark Navy) */
 header {
@@ -131,8 +129,7 @@ footer a {
 }
 
 
-/* Content Sections
-------------------------------------*/
+/* Content Sections */
 
 /* Step 4c: Work Experience section background set to white from palette */
 /* Step 4d: Targeted via nth-of-type since no class was needed on the section tag */
@@ -165,8 +162,7 @@ section:nth-of-type(3) {
 }
 
 
-/* Job / Project Cards — Alternating Row Colors
-------------------------------------*/
+/* Job / Project Cards — Alternating Row Colors */
 
 /* Step 4d: .job class added to each entry div in HTML to apply shared card styles */
 .job {
@@ -185,8 +181,7 @@ section:nth-of-type(3) {
 }
 
 
-/* Scroll Animations
-------------------------------------*/
+/* Scroll Animations */
 
 /* Sections start invisible and shifted left; JS adds .visible to trigger the transition */
 .slide_left {
